@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF5E0"
+    tools:context=".AddmoodActivity">
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="44dp"
+        android:contentDescription="Back"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_feeling"
+        android:layout_width="235dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/how_are_you_feeling_today"
+        android:textColor="#190933"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/back_button" />
+
+    <ImageView
+        android:id="@+id/eye_left"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:backgroundTint="#A8D5BA"
+        android:src="@drawable/eye_shape_good"
+        app:layout_constraintTop_toBottomOf="@id/text_feeling"
+        app:layout_constraintEnd_toStartOf="@id/eye_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread" />
+
+    <ImageView
+        android:id="@+id/eye_right"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:backgroundTint="#A8D5BA"
+        android:src="@drawable/eye_shape_good"
+        app:layout_constraintTop_toTopOf="@id/eye_left"
+        app:layout_constraintStart_toEndOf="@id/eye_left"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/mouth"
+        android:layout_width="74dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ellipse"
+        android:backgroundTint="#A8D5BA"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eye_left" />
+
+    <TextView
+        android:id="@+id/mood_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="GOOD"
+        android:textColor="#A8D5BA"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mouth" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submit_button"
+        android:layout_width="216dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="48dp"
+        android:text="Submit"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#A8D5BA"
+        app:layout_constraintTop_toBottomOf="@id/moodSeekBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/moodSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/seekbar_height"
+        android:layout_marginTop="@dimen/seekbar_margin_top"
+        android:layout_marginHorizontal="@dimen/seekbar_margin_horizontal"
+        android:max="2"
+        android:progress="0"
+        android:progressDrawable="@drawable/custom_seekbar_track"
+        android:thumb="@drawable/custom_seekbar_thumb"
+        android:thumbOffset="@dimen/seekbar_thumb_offset"
+        android:minHeight="@dimen/seekbar_height"
+        android:paddingVertical="0dp"
+        android:splitTrack="false"
+        app:layout_constraintTop_toBottomOf="@id/mood_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

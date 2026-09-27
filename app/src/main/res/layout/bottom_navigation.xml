@@ -1,0 +1,39 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#E4998B"
+    android:padding="0dp"
+    android:gravity="center"
+    android:layout_gravity="bottom">
+
+
+    <ImageView
+        android:id="@+id/nav_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:contentDescription="Home"
+        android:src="@drawable/ic_home"
+        app:tint="#000000" />
+
+    <ImageView
+        android:id="@+id/nav_note"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_note"
+        android:contentDescription="Note"
+        app:tint="#000000" />
+
+    <ImageView
+        android:id="@+id/nav_calendar"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_calendar"
+        android:contentDescription="Calendar"
+        app:tint="#000000" />
+</LinearLayout>
